@@ -1,2 +1,2 @@
-pub mod parser;
-pub mod text;
+mod text;
+mod parser;

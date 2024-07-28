@@ -11,5 +11,5 @@ pub trait Context {
 }
 
 pub trait Separate {
-    fn execute(file: File) -> dyn Context;
+    fn execute(file: File) -> Option<&Box<dyn Context>>;
 }

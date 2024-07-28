@@ -4,6 +4,8 @@ use std::string::String;
 
 use clap::Parser;
 
+mod core;
+
 const DEFAULT_COMMAND_LINE_DIR_PATH: &str = "resources";
 const DEFAULT_COMMAND_LINE_FILE_PATH: &str = "command-group.txt";
 

@@ -1,6 +1,7 @@
 use std::collections::HashMap;
+use std::fs::File;
 
-use crate::core::parse::parser::{Context, Snippet};
+use crate::core::parse::parser::{Context, Separate, Snippet};
 
 struct TextSnippet {
     sequence: usize,
@@ -26,5 +27,11 @@ impl Context for TextSnippetContext {
 
     fn find_by_title(&self, title: &str) -> Option<&Box<dyn Snippet>> {
         self.title_table.get(title)
+    }
+}
+
+impl Separate for TextSnippet {
+    fn execute(file: File) -> Option<&Box<dyn Context>> {
+        todo!()
     }
 }

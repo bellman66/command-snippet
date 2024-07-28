@@ -11,5 +11,5 @@ pub trait Context {
 }
 
 pub trait Separate {
-    fn execute(file: File) -> Option<&Box<dyn Context>>;
+    fn execute(&self, file: &mut File) -> Option<&'static Box<dyn Context>>;
 }
